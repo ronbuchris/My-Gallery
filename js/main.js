@@ -28,7 +28,7 @@ function renderProjs() {
             </a>
             <div class="portfolio-caption">
               <h4>${proj.name}</h4>
-              <p class="text-muted">${proj.labels[0]}</p>
+              <p class="text-muted">${proj.labels}</p>
             </div>
           </div> 
         `;
@@ -40,52 +40,10 @@ function openModal(projId) {
   var proj = getProjById(projId);
   $('h2').text(proj.name);
   $('.title-proj').text(proj.title);
-  $('.title-proj').text(proj.title);
-  $('.description-proj').text(makeLorem(20));
+  $('.description-proj').text(proj.desc);
   document.querySelector('.proj-img').src = `img/portfolio/${proj.id}.jpg`;
+  $('.url-proj').attr('href', `${proj.url}`);
   // $('.proj-img').text(proj.img);
 }
 
 //util
-function makeLorem(size = 100) {
-  var words = [
-    'The sky',
-    'above',
-    'the port',
-    'was',
-    'the color of television',
-    'tuned',
-    'to',
-    'a dead channel',
-    '.',
-    'All',
-    'this happened',
-    'more or less',
-    '.',
-    'I',
-    'had',
-    'the story',
-    'bit by bit',
-    'from various people',
-    'and',
-    'as generally',
-    'happens',
-    'in such cases',
-    'each time',
-    'it',
-    'was',
-    'a different story',
-    '.',
-    'It',
-    'was',
-    'a pleasure',
-    'to',
-    'burn',
-  ];
-  var txt = '';
-  while (size > 0) {
-    size--;
-    txt += words[Math.floor(Math.random() * words.length)] + ' ';
-  }
-  return txt;
-}

@@ -13,9 +13,9 @@ function _createProj(id, name, title, desc, url, labels) {
     name,
     title,
     desc,
-    url: `https://ronbuchris.github.io/-${name}-/`,
+    url,
     publishedAt: Date.now(),
-    labels: ['games'],
+    labels,
   };
 }
 
@@ -26,7 +26,8 @@ function _createProjs() {
       'minesweeper',
       'minesweeper',
       'better not touch the mines',
-      'something',
+      'Minesweeper is a single-player puzzle video game. The objective of the game is to clear a rectangular board containing hidden "mines" or bombs without detonating any of them, with help from clues about the number of neighbouring mines in each field. The game originates from the 1960s, and it has been written for many computing platforms in use today. It has many variations and offshoots.',
+      'https://ronbuchris.github.io/-minesweeper-/',
       'games'
     )
   );
@@ -34,8 +35,9 @@ function _createProjs() {
     _createProj(
       'InPicture',
       'In Picture',
-      'better not touch the mines',
-      'something',
+      'what in the picture ?',
+      `${makeLorem(20)}`,
+      'https://ronbuchris.github.io/InPicture/',
       'games'
     )
   );
@@ -43,8 +45,9 @@ function _createProjs() {
     _createProj(
       'TouchNums',
       'Touch Nums',
-      'better not touch the mines',
-      'something',
+      'try to break the record',
+      `${makeLorem(20)}`,
+      'https://ronbuchris.github.io/TouchNums/',
       'games'
     )
   );
@@ -52,8 +55,9 @@ function _createProjs() {
     _createProj(
       'BallBoard',
       'Ball Board',
-      'better not touch the mines',
-      'something',
+      'try to eat all the balls',
+      `${makeLorem(20)}`,
+      'https://ronbuchris.github.io/BallBoard/',
       'games'
     )
   );
@@ -61,8 +65,9 @@ function _createProjs() {
     _createProj(
       'Chess',
       'Chess',
-      'better not touch the mines',
-      'something',
+      'do you think you smart ?',
+      `${makeLorem(20)}`,
+      'https://ronbuchris.github.io/Chess/',
       'games'
     )
   );
@@ -70,8 +75,9 @@ function _createProjs() {
     _createProj(
       'Todos',
       'Todos',
-      'better not touch the mines',
-      'something',
+      'todos list',
+      `${makeLorem(20)}`,
+      'https://ronbuchris.github.io/Todos/',
       'games'
     )
   );
@@ -79,8 +85,9 @@ function _createProjs() {
     _createProj(
       'BooksShop',
       'Books Shop',
-      'better not touch the mines',
-      'something',
+      'buy, sell and rate books ',
+      `${makeLorem(20)}`,
+      'https://ronbuchris.github.io/BooksShop/',
       'games'
     )
   );
@@ -88,8 +95,9 @@ function _createProjs() {
     _createProj(
       'Sokoban',
       'Sokoban',
-      'better not touch the mines',
-      'something',
+      'move the box to the pins',
+      `${makeLorem(20)}`,
+      'https://ronbuchris.github.io/Sokoban/',
       'games'
     )
   );
@@ -97,8 +105,9 @@ function _createProjs() {
     _createProj(
       'Pacman',
       'Pacman',
-      'better not touch the mines',
-      'something',
+      'do you afraid of ghosts?',
+      `${makeLorem(20)}`,
+      'https://ronbuchris.github.io/Pacman/',
       'games'
     )
   );
@@ -111,4 +120,47 @@ function getProjById(projId) {
     return projId === proj.id;
   });
   return proj;
+}
+
+function makeLorem(size = 100) {
+  var words = [
+    'The sky',
+    'above',
+    'the port',
+    'was',
+    'the color of television',
+    'tuned',
+    'to',
+    'a dead channel',
+    '.',
+    'All',
+    'this happened',
+    'more or less',
+    '.',
+    'I',
+    'had',
+    'the story',
+    'bit by bit',
+    'from various people',
+    'and',
+    'as generally',
+    'happens',
+    'in such cases',
+    'each time',
+    'it',
+    'was',
+    'a different story',
+    '.',
+    'It',
+    'was',
+    'a pleasure',
+    'to',
+    'burn',
+  ];
+  var txt = '';
+  while (size > 0) {
+    size--;
+    txt += words[Math.floor(Math.random() * words.length)] + ' ';
+  }
+  return txt;
 }

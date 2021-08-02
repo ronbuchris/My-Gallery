@@ -52,7 +52,36 @@
     <aside class="offcanvas-aside">
       <!-- Contact -->
       <section id="contact">
-        <h4>Contact Me</h4>
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label"
+            >Your E-mail</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="formGroupExampleInput"
+            placeholder="name@mail.com"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Subject</label>
+          <input
+            type="text"
+            class="form-control"
+            id="formGroupExampleInput2"
+            placeholder="Type subject"
+          />
+        </div>
+        <div class="form-floating">
+          <label for="floatingTextarea2">Message</label>
+          <textarea
+            class="form-control"
+            placeholder="Your message"
+            id="floatingTextarea2"
+            style="height: 200px"
+          ></textarea>
+        </div>
+        <button type="button" class="btn btn-warning">Submit</button>
       </section>
     </aside>
 
@@ -277,35 +306,24 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2>Project Name</h2>
-                  <p class="item-intro text-muted title-proj">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
+                  <h2></h2>
+                  <p class="item-intro text-muted title-proj"></p>
                   <img
                     class="img-fluid d-block mx-auto proj-img"
-                    src="img/portfolio/01-full.jpg"
+                    src=""
                     alt=""
                   />
-                  <p class="description-proj">
-                    Use this area to describe your project. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
-                  </p>
+                  <p class="description-proj"></p>
                   <ul class="list-inline">
                     <li>Date: January 2017</li>
                     <li>Client: Threads</li>
                     <li>Category: Illustration</li>
                   </ul>
-                  <button
-                    class="btn btn-primary"
-                    data-dismiss="modal"
-                    type="button"
-                  >
-                    <i class="fa fa-times"></i>
-                    Close Project
-                  </button>
+                  <a class="url-proj" target="_blank" href="">
+                    <button class="btn btn-primary" type="button">
+                      Play Now
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
